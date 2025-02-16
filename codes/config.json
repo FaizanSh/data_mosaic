@@ -1,0 +1,32 @@
+{   
+    "Reddit": {
+        "client_id" : "******************",
+        "client_secret" : "**********************",
+        "user_agent": "Prjoect1",
+        "subreddit_name": "cryptocurrency",
+        "visualize":"True"
+    },
+    "Google":{
+        "keywords": ["Bitcoin", "Crypto"],
+        "months": {
+          "January": ["2025-01-01", "2025-01-15"],
+          "December": ["2024-12-01", "2024-12-15"],
+          "November": ["2024-11-01", "2024-11-15"],
+          "October": ["2024-10-01", "2024-10-15"],
+          "September": ["2024-09-01", "2024-09-15"],
+          "August": ["2024-08-01", "2024-08-15"],
+          "July": ["2024-07-01", "2024-07-15"],
+          "June": ["2024-06-01", "2024-06-15"],
+          "May": ["2024-05-01", "2024-05-15"],
+          "April": ["2024-04-01", "2024-04-15"],
+          "March": ["2024-03-01", "2024-03-15"]
+        },
+        "visualize":"True"
+      },
+    "Kaggle":{
+        "visualize":"False"
+    },
+    "Yahoo":{
+        "visualize":"True"
+    }
+}

@@ -1,0 +1,9 @@
+pytrends
+plotly
+pandas
+glob
+matplotlib
+seaborn
+praw
+yfinance
+os
