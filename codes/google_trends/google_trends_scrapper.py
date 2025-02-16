@@ -39,10 +39,10 @@ def process_trends_data(df):
 
 def save_trends_data(df, month, year):
     """
-    Saves the processed trends data to a CSV file with a dynamic filename in the ../dataset/ folder.
+    Saves the processed trends data to a CSV file with a dynamic filename in the ../dataset/raw/ folder.
     """
     # Define the dataset directory relative to the current working directory
-    dataset_dir = "../dataset"
+    dataset_dir = "../dataset/raw"
     
     # Create the directory if it doesn't exist
     os.makedirs(dataset_dir, exist_ok=True)

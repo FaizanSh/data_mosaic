@@ -8,7 +8,7 @@ def find_reddit_csv_files(pattern="*reddit*.csv"):
     Finds CSV files matching the provided pattern.
     """
     # files = glob.glob(pattern)
-    dataset_folder = os.path.join("..", "dataset")  # Path to dataset folder
+    dataset_folder = os.path.join("..", "dataset/raw")  # Path to dataset folder
     files = glob.glob(os.path.join(dataset_folder, pattern))  # Search in dataset folder
     return files
 

@@ -6,7 +6,7 @@ import pandas as pd
 
 # Define dataset parameters
 DATASET_NAME = "sudalairajkumar/cryptocurrencypricehistory"
-DOWNLOAD_PATH = "../dataset/crypto_data_1"
+DOWNLOAD_PATH = "../dataset/raw/crypto_data_1"
 
 
 def download_kaggle_dataset(dataset_name, download_path):
@@ -52,8 +52,8 @@ def analyze_data(df):
     # stats
     stats_price_change = df.groupby("Name")["Price Change"].agg(["mean", "min", "max"])
     stats_volatility = df.groupby("Name")["Volatility"].agg(["mean", "min", "max"])
-    stats_price_change.to_csv("Price_Change_Analysis.csv")
-    stats_volatility.to_csv("Volatility_Analysis.csv")
+    stats_price_change.to_csv("../analysis/Price_Change_Analysis.csv")
+    stats_volatility.to_csv("../analysis/Volatility_Analysis.csv")
     print("Analysis saved as CSV files!")
 
 # Main Entry Point

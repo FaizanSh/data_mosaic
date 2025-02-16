@@ -4,9 +4,9 @@ import plotly.graph_objects as go
 
 def find_crypto_csv_files(pattern="crypto*.csv"):
     """
-    Finds CSV files matching the provided pattern in the ../dataset/ folder.
+    Finds CSV files matching the provided pattern in the ../dataset/raw/ folder.
     """
-    search_path = f"../dataset/{pattern}"
+    search_path = f"../dataset/raw/{pattern}"
     files = glob.glob(search_path)
     print("Found files:", files)
     return files

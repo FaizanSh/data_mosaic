@@ -53,7 +53,7 @@ def yahoo_data_fetch(tickers=["BTC-USD", "ETH-USD", "DOGE-USD", "SOL-USD", "BNB-
     crypto_resampled = resample_crypto_data(crypto_data, sampling_time)
 
     # Write data to csv
-    crypto_resampled.to_csv("../dataset/yahoo_crypto_data.csv", index=False)
+    crypto_resampled.to_csv("../dataset/raw/yahoo_crypto_data.csv", index=False)
     
     return crypto_resampled
 
@@ -61,7 +61,7 @@ def yahoo_visualization():
     """
     Main function to fetch, process, and visualize Yahoo Finance cryptocurrency data.
     """
-    read_data = pd.read_csv("../dataset/yahoo_crypto_data.csv")
+    read_data = pd.read_csv("../dataset/raw/yahoo_crypto_data.csv")
     
     # Create Plot
     fig = create_crypto_plot(read_data, ["BTC-USD", "ETH-USD", "DOGE-USD", "SOL-USD", "BNB-USD"])

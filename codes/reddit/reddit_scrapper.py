@@ -42,7 +42,7 @@ def save_dataframe_to_csv(df, output_file):
     """
     # df.to_csv(output_file, index=False)
     # Define the path to the dataset folder in the previous directory
-    file = os.path.join("..", "dataset", output_file)
+    file = os.path.join("..", "dataset/raw", output_file)
 
 # Save the DataFrame to the specified path
     df.to_csv(file, index=False)
@@ -52,7 +52,7 @@ def save_dataframe_to_csv(df, output_file):
 # Main Entry Point
 def fetch_reddit_data(client_id, client_secret, user_agent, 
                       subreddit_name="cryptocurrency", post_limit=100, 
-                      output_file="../dataset/crypto_reddit_data.csv"):
+                      output_file="../dataset/raw/crypto_reddit_data.csv"):
     """
     Data Orchastration
     1. Authenticate with Reddit.
