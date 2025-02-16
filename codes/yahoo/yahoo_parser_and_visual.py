@@ -48,12 +48,14 @@ def yahoo_data_fetch(tickers=["BTC-USD", "ETH-USD", "DOGE-USD", "SOL-USD", "BNB-
     """
     # Fetch data from Yahoo Finance
     crypto_data = fetch_crypto_data(tickers, period="2y")
+    crypto_data.to_csv("../dataset/raw/yahoo_crypto_data.csv", index=False)
     
     # Resample the data
     crypto_resampled = resample_crypto_data(crypto_data, sampling_time)
 
     # Write data to csv
-    crypto_resampled.to_csv("../dataset/raw/yahoo_crypto_data.csv", index=False)
+    # crypto_resampled.to_csv("../dataset/raw/yahoo_crypto_data.csv", index=False)
+    crypto_resampled.to_csv("../analysis/yahoo_crypto_resampled_data.csv", index=False)
     
     return crypto_resampled
 
